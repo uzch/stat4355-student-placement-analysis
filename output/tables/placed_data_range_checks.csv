@@ -1,0 +1,8 @@
+variable,min_value,max_value
+cgpa,4.682995697445048,10
+backlogs,0,6
+internship_count,0,5
+aptitude_score,30,100
+communication_score,30,100
+internship_quality_score,1,10
+salary,24320.52970903912,120000
