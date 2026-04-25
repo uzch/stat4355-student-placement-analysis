@@ -1,0 +1,7 @@
+metric,value
+n_rows_raw,10000
+n_cols_raw,13
+total_missing_values,0
+duplicate_rows,0
+placed_rows,6153
+not_placed_rows,3847
