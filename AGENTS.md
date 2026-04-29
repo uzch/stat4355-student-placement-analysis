@@ -275,6 +275,30 @@ car
 broom
 ```
 
+Install packages locally as needed, but avoid placing unnecessary package installation commands inside analysis scripts unless required for class reproducibility.
+
+## Suggested Codex Tasks
+
+When using Codex or another coding assistant, use narrow, file-specific tasks.
+
+Good task examples:
+
+```text
+Read README.md and the current branch only. Do not modify files yet. Summarize the current repository structure and list the exact scripts and outputs still needed.
+```
+
+```text
+Create scripts/simple_regression_screening.R using data/placed_salary_data.csv. Save output/tables/simple_regression_summary.csv. Do not modify existing cleaning or EDA scripts.
+```
+
+```text
+Create scripts/model_selection.R. Fit the full salary model, run stepwise AIC, compare full and selected models using AIC and adjusted R-squared, run VIF, and save outputs to output/tables/. Do not modify existing cleaning or EDA scripts.
+```
+
+```text
+Create scripts/model_diagnostics.R. Generate residual diagnostics, transformation checks, and influence analysis outputs for the selected model. Save figures to output/figures/ and tables to output/tables/.
+```
+
 ## Project Standard
 
 A strong final project should demonstrate a complete applied linear modeling workflow:
