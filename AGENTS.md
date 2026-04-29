@@ -114,51 +114,54 @@ Ignore missing-file or conflict issues involving `salary_vs_cgpa.png` unless exp
 
 ## Plot Style
 
-All new plots should be presentation/report ready.
+All new plots must be presentation/report ready.
 
-Use clear, readable graphics:
-- descriptive title
-- readable axis labels
-- readable legend title
-- clean theme
-- sufficient font size
-- no cluttered labels
-- no unreadable overlapping text
-- no screenshots of plots
-- save as `.png`
-- use consistent dimensions
+General rules:
+- use `ggplot2`
+- use a clean theme such as `theme_minimal()`
+- use readable titles, subtitles if useful, and axis labels
+- use readable font sizes
+- use clear legend titles
+- use comma formatting for salary/fitted/residual axes when helpful
+- save final plots as `.png`
+- use consistent dimensions across related figures
+- avoid clutter, tiny text, and overcrowded labels
+- do not use screenshots of plots
 
-Prefer `ggplot2`.
+For residual / diagnostic plots:
+- use fitted values on the x-axis
+- use residuals or studentized residuals on the y-axis
+- include a horizontal reference line at 0
+- use semi-transparent points when many observations overlap
+- include a smooth trend line only when it helps diagnose structure
+- do not overinterpret the smoother in code comments
 
-Use `theme_minimal()` or another clean professional theme.
+For comparison plots:
+- prefer compact panels over many separate plots
+- use facets or side-by-side panels when comparing models
+- keep panel labels short and readable
+- use consistent scales when comparison requires it
 
-Use color only when it improves interpretation.
+For categorical plots:
+- boxplots, violin plots, dot plots, or bar charts are acceptable
+- rotate x-axis labels if needed
+- order categories when it improves readability
+- use clear y-axis labels and salary formatting
 
-When color is useful:
-- use clear contrast
+Color rules:
+- use color only when it improves interpretation
+- avoid random colors
 - avoid excessive palettes
 - keep color meaning consistent across related plots
-- use colorblind-friendly palettes when practical
+- prefer colorblind-friendly colors when practical
 
-For plots similar to David's residual/model plots, prefer:
-- readable titles
-- neutral points with transparency
-- strong fitted/smoothing line when useful
-- dashed horizontal reference line at zero for residual plots
-- comma formatting for salary axes
-- side-by-side comparison plots when useful
-
-For residual plots:
-- plot fitted values on x-axis
-- plot residuals or studentized residuals on y-axis
-- include horizontal zero reference line
-- avoid overinterpreting smoothing curves in code comments
-
-For categorical salary plots:
-- boxplots are acceptable but should be polished
-- rotate x-axis labels when needed
-- order categories when it improves readability
-- include clear y-axis salary formatting
+Avoid:
+- default-looking cluttered plots
+- too many colors
+- unreadable legends
+- raw R console screenshots
+- plot titles that are too long
+- decorative code comments
 
 ## R Style
 
