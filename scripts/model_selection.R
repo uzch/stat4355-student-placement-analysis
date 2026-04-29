@@ -5,6 +5,8 @@ suppressPackageStartupMessages({
   library(car)
 })
 
+dir.create("output/tables", recursive = TRUE, showWarnings = FALSE)
+
 format_p_value <- function(p) {
   ifelse(is.na(p), NA_character_, ifelse(p < 0.001, "<0.001", formatC(p, format = "f", digits = 3)))
 }
