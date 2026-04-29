@@ -6,11 +6,11 @@ format_p_value <- function(p) {
 
 numeric_predictors <- c(
   "cgpa",
-  "backlogs",
-  "internship_count",
+  "backlogs", # dropped
+  "internship_count", # dropped
   "aptitude_score",
-  "communication_score",
-  "internship_quality_score"
+  "communication_score", # dropped
+  "internship_quality_score" # dropped
 )
 
 categorical_predictors <- c(

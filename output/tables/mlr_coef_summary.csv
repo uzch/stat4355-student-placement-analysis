@@ -1,0 +1,25 @@
+term,coefficient,std_error,t_statistic,p_value,significant
+(Intercept),81523.4939,978.5595,83.3097,0,***
+cgpa,4340.8896,100.6638,43.1226,0,***
+backlogs,17.0055,78.6695,0.2162,0.8289,
+internship_count,6.7977,59.2511,0.1147,0.9087,
+aptitude_score,7.6617,5.072,1.5106,0.1309,
+communication_score,3.8292,4.9979,0.7661,0.4436,
+internship_quality_score,32.2671,50.0606,0.6446,0.5192,
+college_tierTier 2,-12004.3269,176.7891,-67.902,0,***
+college_tierTier 3,-27527.263,189.4736,-145.2829,0,***
+countryGermany,-3584.2359,232.7931,-15.3967,0,***
+countryIndia,-45845.5392,231.8977,-197.6972,0,***
+countryUK,3396.5456,235.3743,14.4304,0,***
+countryUSA,14069.448,231.0193,60.9016,0,***
+university_ranking_band300+,-2222.131,167.8413,-13.2395,0,***
+university_ranking_bandTop 100,2689.66,191.5784,14.0395,0,***
+specializationCloud,-9778.8954,231.4969,-42.242,0,***
+specializationCore CS,-10149.4811,234.1135,-43.3528,0,***
+specializationCybersecurity,-9908.1127,232.2445,-42.6624,0,***
+specializationData Science,-263.8094,232.175,-1.1363,0.2559,
+industryFinance,3676.6996,249.6918,14.725,0,***
+industryHealthcare,287.7367,248.6144,1.1574,0.2472,
+industryManufacturing,358.2625,258.1693,1.3877,0.1653,
+industryOther,90.3856,259.0605,0.3489,0.7272,
+industryTech,6742.6621,246.7008,27.3313,0,***
