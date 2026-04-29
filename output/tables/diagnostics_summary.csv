@@ -1,0 +1,7 @@
+"topic","conclusion"
+"residual_pattern","Interaction OLS residuals are more centered and flatter than the base OLS model, but the high fitted-value region still shows a ceiling pattern."
+"normality","QQ plot and residual histogram are reasonably close to normal, with mild tail deviation."
+"influence","No observations exceed Cook's D > 1 and high leverage count is 0. 14 observations have |studentized residual| > 3. 299 observations exceed the sensitive 4/n Cook's rule, but max Cook's D is 0.002124, so no single observation appears to dominate the model."
+"salary_cap_120000","The 120000 salary cap remains visible in residuals and should be discussed as a dataset limitation."
+"transformation_check","Box-Cox best lambda is approximately 0.9. Box-Cox suggests little/no transformation. Log and square-root models were checked; transformed-response fit statistics are not directly comparable to raw salary fit statistics."
+"final_model_direction","Use interaction OLS as the main in-scope model unless transformation diagnostics clearly justify changing the response scale. Treat Tobit only as a salary-cap sensitivity discussion, not the final model."

@@ -1,0 +1,3 @@
+"term","df.residual","rss","df","sumsq","statistic","p.value","p_value_label"
+"salary ~ cgpa + aptitude_score + college_tier + country + university_ranking_band + specialization + industry",6133,202815702423.1,NA,NA,NA,NA,NA
+"salary ~ cgpa + aptitude_score + college_tier * country + university_ranking_band + specialization + industry",6125,164113189703.331,8,38702512719.7697,180.555940413072,7.99826921750036e-275,"7.998e-275"

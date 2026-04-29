@@ -1,0 +1,14 @@
+"metric","value"
+"n_observations",6153
+"n_parameters_including_intercept",28
+"cook_threshold_sensitive_4_over_n",0.000650089387290752
+"cook_threshold_class_1",1
+"leverage_threshold_2p_over_n",0.00910125142207053
+"studentized_threshold_abs_3",3
+"flagged_by_sensitive_cooks",299
+"flagged_by_class_cooks",0
+"flagged_by_high_leverage",0
+"flagged_by_studentized_residual",14
+"max_cooks_distance",0.00212415207182335
+"max_leverage",0.00682094090966551
+"max_abs_studentized_residual",3.70547416781197
