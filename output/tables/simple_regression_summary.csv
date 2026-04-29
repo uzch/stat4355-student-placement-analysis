@@ -1,0 +1,12 @@
+predictor,predictor_type,coefficient_or_effect,p_value,r_squared,adjusted_r_squared,takeaway
+cgpa,numeric,slope = 3383.70,<0.001,0.0104,0.0102,Significant positive salary association
+backlogs,numeric,slope = -966.14,0.004,0.0014,0.0012,Significant negative salary association
+internship_count,numeric,slope = 47.67,0.852,0,-2e-4,No statistically significant linear association
+aptitude_score,numeric,slope = -38.63,0.078,5e-4,3e-4,No statistically significant linear association
+communication_score,numeric,slope = -10.27,0.634,0,-1e-4,No statistically significant linear association
+internship_quality_score,numeric,slope = 40.93,0.849,0,-2e-4,No statistically significant linear association
+college_tier,categorical,overall F-test = 753.11,<0.001,0.1967,0.1965,Overall mean salary differs across groups
+country,categorical,overall F-test = 3549.09,<0.001,0.6978,0.6976,Overall mean salary differs across groups
+university_ranking_band,categorical,overall F-test = 11.81,<0.001,0.0038,0.0035,Overall mean salary differs across groups
+specialization,categorical,overall F-test = 48.19,<0.001,0.0304,0.0298,Overall mean salary differs across groups
+industry,categorical,overall F-test = 9.14,<0.001,0.0074,0.0066,Overall mean salary differs across groups
