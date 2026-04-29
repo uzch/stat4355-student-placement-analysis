@@ -1,0 +1,6 @@
+country,n,mean_residual,median_residual,residual_sd,mean_abs_residual,rmse,percent_overpredicted,percent_underpredicted,percent_capped
+Canada,1216,-0,261.66,5122.18,4028.07,5120.08,48.44,51.56,9.46
+Germany,1234,0,-57.08,5081.24,4053.51,5079.18,50.65,49.35,6.81
+India,1254,0,-31.9,5172.2,4074.21,5170.14,50.24,49.76,0
+UK,1180,-0,162.08,5107.69,4094.64,5105.53,48.47,51.53,16.02
+USA,1269,0,65.58,5337.4,4313.15,5335.29,49.17,50.83,45.23
