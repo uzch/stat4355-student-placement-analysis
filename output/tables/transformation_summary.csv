@@ -1,0 +1,4 @@
+"model","response","residual_sd","adj_r_squared","note"
+"raw_salary_interaction_ols","salary",5176.29115831459,0.956788059534168,"main model; easiest to interpret in salary dollars"
+"log_salary_interaction_ols","log(salary)",0.068412813257168,0.956230601629762,"common salary transformation; check plots before using"
+"sqrt_salary_interaction_ols","sqrt(salary)",9.02779206071557,0.958888458773326,"possible variance-stabilizing check; less common for salary"

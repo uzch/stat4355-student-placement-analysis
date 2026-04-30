@@ -1,0 +1,2 @@
+"best_lambda","interpretation","note"
+0.9,"Box-Cox suggests little/no transformation","Arcsine transformation not tested because salary is not a 0-1 proportion."

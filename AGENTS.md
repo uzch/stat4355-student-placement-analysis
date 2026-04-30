@@ -1,271 +1,173 @@
-# STAT 4355 Student Placement Salary Analysis
+# AGENTS.md
 
-A reproducible applied linear modeling project that analyzes salary outcomes among placed students using the Global Student Placement & Salary Dataset.
+## Scope
 
-This repository supports the full project workflow for **STAT 4355 Applied Linear Models**, including data preparation, exploratory data analysis, simple regression screening, multiple regression modeling, model selection, diagnostics, and final presentation/report deliverables.
+Work only on the current branch unless told otherwise.
 
-## Project Overview
+This is a STAT 4355 Applied Linear Models project in R.
 
-The goal of this project is to identify which student-related factors are most associated with salary after job placement.
+Use `README.md` for project context.
 
-The analysis focuses on students who received placements, allowing the regression model to explain variation in salary level rather than simply distinguishing between placed and unplaced students.
+Use `data/placed_salary_data.csv` for modeling.
 
-## Research Question
+Never use `placement_status` as a predictor.
 
-**Which academic, experiential, and background factors best explain salary among students who received job placements?**
+Keep work inside the project scope:
+- applied linear regression
+- model selection
+- residual diagnostics
+- transformation checks if needed
+- influence analysis
+- presentation/report-ready outputs
 
-## Dataset
+## Communication Style
 
-**Source:** Kaggle  
-**Dataset:** Global Student Placement & Salary Dataset  
-**Access:** Public Kaggle dataset
+Use concise, technical, low-token responses.
 
-### Original Data
+Follow Caveman-style token discipline:
+- no filler
+- no long preambles
+- no repeated explanations
+- no motivational language
+- no unnecessary caveats
+- no verbose summaries
+- short bullets preferred
+- report only what changed, what ran, and what remains
 
-- 10,000 observations
-- 13 variables
-- Includes placement status and salary outcomes
+Do not use joke/caveman wording in code, comments, tables, plots, report text, or slides.
 
-### Modeling Data
+At the end of each task, report only:
+- files changed
+- files created
+- commands run
+- issues / assumptions
 
-- 6,153 observations
-- Placed students only
-- `placement_status` removed before modeling
-- `salary` used as the continuous response variable
+## Paths
 
-## Modeling Decision
-
-The regression analysis uses only students with job placements.
-
-This is necessary because all unplaced students have salary equal to zero. Including those observations would cause the model to partially predict placement status rather than salary differences among placed students.
-
-For this reason:
-
-- use `data/placed_salary_data.csv` for modeling;
-- do not use `placement_status` as a predictor;
-- interpret results as salary modeling among placed students only.
-
-## Repository Structure
-
-```text
-.
-├── data/
-│   ├── global_placement.csv
-│   ├── global_placement_clean.csv
-│   └── placed_salary_data.csv
-├── scripts/
-│   ├── 01_clean_data.R
-│   ├── 02_eda_tables.R
-│   └── 03_eda_plots.R
-├── output/
-│   ├── figures/
-│   └── tables/
-├── report/
-├── slides/
-└── README.md
-```
-
-## Data Files
-
-| File | Description |
-|---|---|
-| `data/global_placement.csv` | Original Kaggle dataset |
-| `data/global_placement_clean.csv` | Cleaned full dataset after type formatting and validation |
-| `data/placed_salary_data.csv` | Placed-students-only dataset used for regression analysis |
-
-## Current Scripts
-
-| Script | Purpose |
-|---|---|
-| `scripts/01_clean_data.R` | Reads the raw dataset, validates structure, creates cleaned full data and placed-only analysis data |
-| `scripts/02_eda_tables.R` | Creates exploratory summary tables, frequency tables, and correlation output |
-| `scripts/03_eda_plots.R` | Creates exploratory figures for salary distribution and predictor relationships |
-
-## Current Outputs
-
-### Tables
-
-Expected files in `output/tables/`:
+Read modeling data from:
 
 ```text
-data_quality_summary.csv
-missing_by_variable.csv
-salary_by_placement_status.csv
-placed_data_range_checks.csv
-numeric_summary.csv
-college_tier_counts.csv
-country_counts.csv
-university_ranking_band_counts.csv
-specialization_counts.csv
-industry_counts.csv
-correlation_matrix.csv
+data/placed_salary_data.csv
 ```
 
-### Figures
-
-Expected files in `output/figures/`:
+Save scripts to:
 
 ```text
-salary_histogram.png
-salary_boxplot.png
-salary_vs_cgpa.png
-salary_vs_backlogs.png
-salary_vs_internship_count.png
-salary_vs_aptitude_score.png
-salary_vs_communication_score.png
-salary_vs_internship_quality_score.png
-salary_by_college_tier.png
-salary_by_country.png
-salary_by_university_ranking_band.png
-salary_by_specialization.png
-salary_by_industry.png
+scripts/
 ```
 
-## Variables
-
-### Response Variable
-
-| Variable | Type | Description |
-|---|---|---|
-| `salary` | Continuous | Salary recorded for each placed student |
-
-### Numeric Predictors
-
-| Variable | Type | Description |
-|---|---|---|
-| `cgpa` | Continuous | Cumulative grade point average |
-| `backlogs` | Discrete | Number of academic backlogs |
-| `internship_count` | Discrete | Number of internships completed |
-| `aptitude_score` | Continuous | Aptitude assessment score |
-| `communication_score` | Continuous | Communication skills score |
-| `internship_quality_score` | Continuous | Internship quality score |
-
-### Categorical Predictors
-
-| Variable | Type | Description |
-|---|---|---|
-| `college_tier` | Categorical | College tier classification |
-| `country` | Categorical | Country associated with the student |
-| `university_ranking_band` | Categorical | University ranking band |
-| `specialization` | Categorical | Academic specialization |
-| `industry` | Categorical | Placement industry |
-
-## Analysis Workflow
-
-The planned modeling workflow is:
-
-1. Prepare cleaned placed-only analysis dataset.
-2. Generate exploratory summary tables and figures.
-3. Run simple regression screening for each predictor.
-4. Fit the full multiple linear regression model.
-5. Perform stepwise AIC model selection.
-6. Compare candidate models using AIC and adjusted R-squared.
-7. Check multicollinearity using VIF.
-8. Perform residual diagnostics.
-9. Evaluate whether transformation is needed.
-10. Check influential observations.
-11. Select and interpret the final model.
-12. Export final tables and figures for the presentation and report.
-
-## Remaining Analysis Tasks
-
-The following scripts still need to be completed:
-
-| Script | Purpose |
-|---|---|
-| `scripts/simple_regression_screening.R` | Run one simple regression per predictor and save a compact screening table |
-| `scripts/model_selection.R` | Fit full model, run stepwise AIC, compare models, calculate VIF, and save final model tables |
-| `scripts/model_diagnostics.R` | Generate residual diagnostics, transformation checks, and influence analysis outputs |
-
-## Expected Future Outputs
-
-### Model Selection Tables
+Save tables to:
 
 ```text
-output/tables/simple_regression_summary.csv
-output/tables/full_model_summary.csv
-output/tables/model_comparison.csv
-output/tables/final_model_coefficients.csv
-output/tables/vif_selected_model.csv
+output/tables/
 ```
 
-### Diagnostic Figures and Tables
+Save figures to:
 
 ```text
-output/figures/residuals_vs_fitted.png
-output/figures/qq_plot.png
-output/figures/residual_histogram.png
-output/figures/cooks_distance.png
-output/figures/leverage_plot.png
-output/tables/influence_summary.csv
+output/figures/
 ```
 
-## Modeling Notes
+Do not save generated outputs outside these folders unless explicitly asked.
 
-Important modeling considerations:
+## Do Not Modify
 
-- `placement_status` must not be used in the salary model.
-- Simple regressions are used for screening, not final model selection.
-- Categorical predictors should be evaluated at the model level, not treated as single-coefficient variables.
-- Very small p-values should be formatted as `<0.001`, not displayed as `0`.
-- Stepwise AIC should be supported by adjusted R-squared, VIF, diagnostics, and interpretability.
-- The salary variable has a visible cap at 120,000, which should be discussed as a limitation and checked during diagnostics.
+Do not modify existing cleaning or EDA scripts unless asked.
 
-## Presentation Plan
+Do not overwrite cleaned datasets unless asked.
 
-The presentation has an 8-minute hard cutoff. The main deck should use no more than 7 slides:
+Do not inspect or depend on other branches unless asked.
 
-1. Title and research question
-2. Dataset and cleaning decision
-3. Variables used
-4. Exploratory data analysis
-5. Simple regression screening
-6. Full model and model selection
-7. Diagnostics and conclusion
+Do not add screenshots of R output.
 
-Backup slides may include:
+Do not create duplicate scripts with overlapping purpose.
 
-- full variable definitions;
-- full simple regression table;
-- final model coefficient table;
-- additional diagnostic plots;
-- influence analysis details.
+Do not rename existing files unless asked.
 
-## Report Plan
+Do not delete files unless asked.
 
-The final report should include:
+Do not make Tobit the final model unless explicitly instructed.
 
-1. Introduction
-2. Data description
-3. Data cleaning
-4. Exploratory data analysis
-5. Simple regression screening
-6. Full model and model selection
-7. Final model interpretation
-8. Residual diagnostics
-9. Transformation discussion
-10. Influence analysis
-11. Limitations
-12. Conclusion
-13. Reflective process
-14. Appendix with team roles, R scripts, and references
+## Figure Rules
 
-## Collaboration Guidelines
+Do not restore or recreate:
 
-- Work from the current branch unless instructed otherwise.
-- Keep scripts focused on one responsibility.
-- Save tables to `output/tables/`.
-- Save figures to `output/figures/`.
-- Do not overwrite cleaned datasets unless intentionally updating the data-preparation step.
-- Do not add unrelated files or screenshots of R output.
-- Prefer reproducible scripts over manual changes.
-- Keep commits focused and descriptive.
+```text
+output/figures/salary_vs_cgpa.png
+```
 
-## R Environment
+That file is intentionally not needed.
 
-This project uses R/RStudio.
+Use this CGPA-related EDA figure instead:
 
-Common packages may include:
+```text
+output/figures/cgpa_vs_salary_by_country.png
+```
+
+Use this residual comparison figure:
+
+```text
+output/figures/resid_comparison.png
+```
+
+Ignore missing-file or conflict issues involving `salary_vs_cgpa.png` unless explicitly asked.
+
+## Plot Style
+
+All new plots must be presentation/report ready.
+
+General rules:
+- use `ggplot2`
+- use a clean theme such as `theme_minimal()`
+- use readable titles, subtitles if useful, and axis labels
+- use readable font sizes
+- use clear legend titles
+- use comma formatting for salary/fitted/residual axes when helpful
+- save final plots as `.png`
+- use consistent dimensions across related figures
+- avoid clutter, tiny text, and overcrowded labels
+- do not use screenshots of plots
+
+For residual / diagnostic plots:
+- use fitted values on the x-axis
+- use residuals or studentized residuals on the y-axis
+- include a horizontal reference line at 0
+- use semi-transparent points when many observations overlap
+- include a smooth trend line only when it helps diagnose structure
+- do not overinterpret the smoother in code comments
+
+For comparison plots:
+- prefer compact panels over many separate plots
+- use facets or side-by-side panels when comparing models
+- keep panel labels short and readable
+- use consistent scales when comparison requires it
+
+For categorical plots:
+- boxplots, violin plots, dot plots, or bar charts are acceptable
+- rotate x-axis labels if needed
+- order categories when it improves readability
+- use clear y-axis labels and salary formatting
+
+Color rules:
+- use color only when it improves interpretation
+- avoid random colors
+- avoid excessive palettes
+- keep color meaning consistent across related plots
+- prefer colorblind-friendly colors when practical
+
+Avoid:
+- default-looking cluttered plots
+- too many colors
+- unreadable legends
+- raw R console screenshots
+- plot titles that are too long
+- decorative code comments
+
+## R Style
+
+Use simple readable R.
+
+Prefer:
 
 ```r
 tidyverse
@@ -273,44 +175,115 @@ ggplot2
 MASS
 car
 broom
+scales
+patchwork
 ```
 
-Install packages locally as needed, but avoid placing unnecessary package installation commands inside analysis scripts unless required for class reproducibility.
+Use package loading only.
 
-## Suggested Codex Tasks
+Avoid:
 
-When using Codex or another coding assistant, use narrow, file-specific tasks.
+```r
+install.packages()
+large banner comments
+unnecessary helper frameworks
+over-engineered functions
+screenshots of R output
+```
 
-Good task examples:
+Use clear names.
+
+Comment only when explaining why.
+
+Do not use large decorative comment blocks.
+
+Format very small p-values as `<0.001`, not `0`.
+
+Use reproducible scripts. Every final table or figure must be generated from code.
+
+## Required Modeling Rules
+
+Simple regression screening:
+- numeric predictors: coefficient, p-value, R-squared, adjusted R-squared
+- categorical predictors: model-level p-value, R-squared, adjusted R-squared
+- save one compact summary table
+- do not use simple regression results as final model selection
+
+Model selection:
+- fit full OLS model
+- run stepwise AIC for candidate predictor selection
+- compare full vs selected model with AIC, R-squared, and adjusted R-squared
+- run VIF
+- save final coefficient table
+- remember: stepwise AIC is a selection method, not a model type
+
+Diagnostics:
+- residuals vs fitted
+- QQ plot
+- residual histogram
+- Cook's distance
+- leverage
+- influence summary
+- check transformation only if diagnostics suggest it
+- discuss the 120000 salary cap if residuals show ceiling effects
+
+Interaction model:
+- compare base selected OLS model against OLS model with `college_tier * country`
+- use AIC, adjusted R-squared, ANOVA, diagnostics, and interpretability
+- interaction model remains OLS
+
+Tobit:
+- use only as sensitivity / salary-cap discussion unless explicitly instructed
+- do not present Tobit as the main final model
+- do not imply Tobit is mathematically equivalent to the OLS-selected model pipeline
+- if used, state that it assumes right-censoring at 120000
+
+## Current Key Model Context
+
+Base selected OLS model:
+
+```r
+salary ~ cgpa + aptitude_score + college_tier + country +
+  university_ranking_band + specialization + industry
+```
+
+Potential interaction OLS model:
+
+```r
+salary ~ cgpa + aptitude_score + college_tier * country +
+  university_ranking_band + specialization + industry
+```
+
+Use the interaction model only if diagnostics/model comparison support it.
+
+## Required Output Standards
+
+Every table or figure must be reproducible from a script.
+
+Tables should be compact and presentation/report friendly.
+
+Figures should be clear, readable, and polished enough for slides.
+
+Do not leave output files with misleading names.
+
+Do not show p-values as exactly zero.
+
+Do not use raw R console screenshots as deliverables.
+
+## Final Task Report Format
+
+When finished, respond in this format only:
 
 ```text
-Read README.md and the current branch only. Do not modify files yet. Summarize the current repository structure and list the exact scripts and outputs still needed.
+Files changed:
+- ...
+
+Files created:
+- ...
+
+Commands run:
+- ...
+
+Issues / assumptions:
+- ...
 ```
-
-```text
-Create scripts/simple_regression_screening.R using data/placed_salary_data.csv. Save output/tables/simple_regression_summary.csv. Do not modify existing cleaning or EDA scripts.
-```
-
-```text
-Create scripts/model_selection.R. Fit the full salary model, run stepwise AIC, compare full and selected models using AIC and adjusted R-squared, run VIF, and save outputs to output/tables/. Do not modify existing cleaning or EDA scripts.
-```
-
-```text
-Create scripts/model_diagnostics.R. Generate residual diagnostics, transformation checks, and influence analysis outputs for the selected model. Save figures to output/figures/ and tables to output/tables/.
-```
-
-## Project Standard
-
-A strong final project should demonstrate a complete applied linear modeling workflow:
-
-- clear research question;
-- justified data cleaning decision;
-- useful exploratory analysis;
-- simple regression screening;
-- full multiple regression model;
-- reasonable variable selection;
-- residual diagnostics;
-- transformation discussion if needed;
-- influential observation checks;
-- honest limitations;
-- clear conclusion.
