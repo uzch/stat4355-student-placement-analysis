@@ -1,0 +1,44 @@
+term_group,term,estimate_dollars,p_value_label,conf_low_dollars,conf_high_dollars
+country_main_effect,countryIndia,"-$55,935",<2.2e-16,"-$57,063","-$54,807"
+college_tier_main_effect,college_tierTier 3,"-$32,960",<2.2e-16,"-$33,695","-$32,224"
+college_tier_main_effect,college_tierTier 2,"-$15,622",<2.2e-16,"-$16,310","-$14,934"
+country_x_college_tier_interaction,college_tierTier 3:countryIndia,"$14,640",5.106e-159,"$13,603","$15,677"
+specialization_main_effect,specializationCore CS,"-$12,836",2.955e-155,"-$13,757","-$11,916"
+specialization_main_effect,specializationCloud,"-$12,140",1.671e-141,"-$13,056","-$11,225"
+specialization_main_effect,specializationCybersecurity,"-$11,898",1.455e-133,"-$12,823","-$10,973"
+country_x_college_tier_interaction,college_tierTier 3:countryUSA,"$10,024",9.352e-80,"$9,000","$11,048"
+country_x_college_tier_interaction,college_tierTier 2:countryUSA,"$9,494",1.104e-81,"$8,537","$10,452"
+industry_effect,industryTech,"$6,681",4.882e-194,"$6,256","$7,106"
+country_x_college_tier_interaction,college_tierTier 2:countryIndia,"$6,276",2.451e-36,"$5,305","$7,246"
+country_x_specialization_interaction,countryUSA:specializationCore CS,"$5,700",3.550e-18,"$4,418","$6,981"
+country_x_specialization_interaction,countryIndia:specializationCore CS,"$5,356",3.202e-16,"$4,074","$6,639"
+country_x_specialization_interaction,countryIndia:specializationCloud,"$5,354",1.938e-16,"$4,081","$6,626"
+country_x_specialization_interaction,countryIndia:specializationCybersecurity,"$4,470",1.108e-11,"$3,182","$5,758"
+country_x_specialization_interaction,countryUSA:specializationCloud,"$4,440",9.904e-12,"$3,164","$5,717"
+country_main_effect,countryUSA,"$4,355",1.532e-14,"$3,247","$5,463"
+numeric_predictor,cgpa,"$4,317",<2.2e-16,"$4,147","$4,486"
+country_x_specialization_interaction,countryUSA:specializationCybersecurity,"$4,266",8.877e-11,"$2,979","$5,554"
+country_main_effect,countryGermany,"-$3,915",4.332e-12,"-$5,021","-$2,809"
+industry_effect,industryFinance,"$3,636",2.546e-60,"$3,206","$4,067"
+university_ranking_band_effect,university_ranking_bandTop 100,"$2,699",1.228e-56,"$2,369","$3,029"
+country_x_college_tier_interaction,college_tierTier 2:countryUK,"$2,193",1.155e-05,"$1,214","$3,172"
+university_ranking_band_effect,university_ranking_band300+,"-$2,181",1.157e-48,"-$2,470","-$1,892"
+country_x_college_tier_interaction,college_tierTier 3:countryUK,"$1,522",0.004,$476,"$2,568"
+country_x_specialization_interaction,countryUK:specializationCloud,"$1,320",0.042,$50,"$2,591"
+country_main_effect,countryUK,"$1,153",0.044,$33,"$2,273"
+country_x_specialization_interaction,countryUK:specializationCore CS,"$1,060",0.115,-$257,"$2,377"
+country_x_specialization_interaction,countryUK:specializationCybersecurity,"$1,029",0.118,-$260,"$2,319"
+country_x_specialization_interaction,countryUK:specializationData Science,$944,0.154,-$354,"$2,243"
+country_x_specialization_interaction,countryGermany:specializationData Science,$791,0.225,-$487,"$2,069"
+specialization_main_effect,specializationData Science,-$680,0.147,"-$1,599",$238
+country_x_specialization_interaction,countryUSA:specializationData Science,$513,0.429,-$760,"$1,785"
+country_x_specialization_interaction,countryGermany:specializationCore CS,$371,0.566,-$897,"$1,638"
+country_x_specialization_interaction,countryGermany:specializationCybersecurity,-$351,0.587,"-$1,619",$916
+industry_effect,industryManufacturing,$285,0.209,-$160,$730
+country_x_specialization_interaction,countryGermany:specializationCloud,$218,0.737,"-$1,058","$1,495"
+country_x_specialization_interaction,countryIndia:specializationData Science,$199,0.759,"-$1,070","$1,468"
+industry_effect,industryOther,-$77,0.737,-$523,$370
+industry_effect,industryHealthcare,$73,0.739,-$356,$502
+country_x_college_tier_interaction,college_tierTier 2:countryGermany,-$56,0.909,"-$1,017",$905
+country_x_college_tier_interaction,college_tierTier 3:countryGermany,$46,0.931,-$992,"$1,084"
+numeric_predictor,aptitude_score,$7,0.116,-$2,$16

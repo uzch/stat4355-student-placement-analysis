@@ -1,0 +1,3 @@
+predictor,interpretation,p_value,confidence_interval
+cgpa,"Holding other variables fixed, a 1-point increase in CGPA is associated with an estimated $4,317 change in salary.",<2.2e-16,"[$4,147, $4,486]"
+aptitude_score,"Holding other variables fixed, a 1-point increase in aptitude score is associated with an estimated $7 change in salary.",0.116,"[-$2, $16]"

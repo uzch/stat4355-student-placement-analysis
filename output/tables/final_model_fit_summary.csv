@@ -1,0 +1,2 @@
+model,n,residual_df,r_squared,adjusted_r_squared,residual_standard_error,aic,bic
+final_ols_country_tier_country_specialization,6153,6109,0.9591163642040189,0.9588285926637952,5052.597099519392,122448.65476658329,122751.26604368661
