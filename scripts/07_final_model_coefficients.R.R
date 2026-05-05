@@ -247,3 +247,14 @@ print(numeric_effects)
 
 cat("\nTop coefficient magnitudes for slide/report review:\n")
 print(head(final_model_coefficients_slide, 15))
+
+# ── Residual Diagnostics: Final Model ─────────────────────────────────────────
+dir.create("output/figures", recursive = TRUE, showWarnings = FALSE)
+
+png("output/figures/final_model_residual_diagnostics.png", 
+    width = 1200, height = 1000, res = 120)
+par(mfrow = c(2, 2))
+plot(final_model)
+dev.off()
+
+cat("Residual diagnostics saved to output/figures/final_model_residual_diagnostics.png\n")
