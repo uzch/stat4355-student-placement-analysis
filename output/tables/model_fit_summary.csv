@@ -1,0 +1,5 @@
+model,adj_r_sq,log_lik,AIC
+OLS Base,0.947,-61987.616,124017.231
+OLS Interaction,0.957,-61336.194,122730.387
+Tobit Base,NA,-52803.716,105649.432
+Tobit Interaction,NA,-52162.71,104383.421

@@ -1,0 +1,6 @@
+predictor,r_squared,adj_r_sq,f_statistic,df_model,f_p_value
+college_tier,0.1967,0.1965,753.111,2,0
+country,0.6978,0.6976,3549.087,4,0
+university_ranking_band,0.0038,0.0035,11.813,2,0
+specialization,0.0304,0.0298,48.193,4,0
+industry,0.0074,0.0066,9.145,5,0

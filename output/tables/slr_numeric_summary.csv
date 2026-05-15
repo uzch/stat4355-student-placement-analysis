@@ -1,0 +1,7 @@
+predictor,coefficient,std_error,t_statistic,p_value,r_squared,adj_r_sq,f_statistic,f_p_value
+cgpa,3383.703,421.252,8.032,0,0.0104,0.0102,64.521,0
+backlogs,-966.14,331.791,-2.912,0.0036,0.0014,0.0012,8.479,0.0036
+internship_count,47.667,255.028,0.187,0.8517,0,-2e-4,0.035,0.8517
+aptitude_score,-38.634,21.899,-1.764,0.0778,5e-4,3e-4,3.112,0.0778
+communication_score,-10.265,21.578,-0.476,0.6343,0,-1e-4,0.226,0.6343
+internship_quality_score,40.932,214.484,0.191,0.8487,0,-2e-4,0.036,0.8487
