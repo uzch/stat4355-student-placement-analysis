@@ -50,13 +50,13 @@ For this reason:
 ```text
 .
 ├── data/
-│   ├── global_placement.csv
-│   ├── global_placement_clean.csv
-│   └── placed_salary_data.csv
+│   
+│   
+│   
 ├── scripts/
-│   ├── 01_clean_data.R
-│   ├── 02_eda_tables.R
-│   └── 03_eda_plots.R
+│   
+│   
+│   
 ├── output/
 │   ├── figures/
 │   └── tables/
@@ -73,53 +73,6 @@ For this reason:
 | `data/global_placement_clean.csv` | Cleaned full dataset after type formatting and validation |
 | `data/placed_salary_data.csv` | Placed-students-only dataset used for regression analysis |
 
-## Current Scripts
-
-| Script | Purpose |
-|---|---|
-| `scripts/01_clean_data.R` | Reads the raw dataset, validates structure, creates cleaned full data and placed-only analysis data |
-| `scripts/02_eda_tables.R` | Creates exploratory summary tables, frequency tables, and correlation output |
-| `scripts/03_eda_plots.R` | Creates exploratory figures for salary distribution and predictor relationships |
-
-## Current Outputs
-
-### Tables
-
-Expected files in `output/tables/`:
-
-```text
-data_quality_summary.csv
-missing_by_variable.csv
-salary_by_placement_status.csv
-placed_data_range_checks.csv
-numeric_summary.csv
-college_tier_counts.csv
-country_counts.csv
-university_ranking_band_counts.csv
-specialization_counts.csv
-industry_counts.csv
-correlation_matrix.csv
-```
-
-### Figures
-
-Expected files in `output/figures/`:
-
-```text
-salary_histogram.png
-salary_boxplot.png
-salary_vs_cgpa.png
-salary_vs_backlogs.png
-salary_vs_internship_count.png
-salary_vs_aptitude_score.png
-salary_vs_communication_score.png
-salary_vs_internship_quality_score.png
-salary_by_college_tier.png
-salary_by_country.png
-salary_by_university_ranking_band.png
-salary_by_specialization.png
-salary_by_industry.png
-```
 
 ## Variables
 
@@ -166,39 +119,6 @@ The planned modeling workflow is:
 10. Check influential observations.
 11. Select and interpret the final model.
 12. Export final tables and figures for the presentation and report.
-
-## Remaining Analysis Tasks
-
-The following scripts still need to be completed:
-
-| Script | Purpose |
-|---|---|
-| `scripts/simple_regression_screening.R` | Run one simple regression per predictor and save a compact screening table |
-| `scripts/model_selection.R` | Fit full model, run stepwise AIC, compare models, calculate VIF, and save final model tables |
-| `scripts/model_diagnostics.R` | Generate residual diagnostics, transformation checks, and influence analysis outputs |
-
-## Expected Future Outputs
-
-### Model Selection Tables
-
-```text
-output/tables/simple_regression_summary.csv
-output/tables/full_model_summary.csv
-output/tables/model_comparison.csv
-output/tables/final_model_coefficients.csv
-output/tables/vif_selected_model.csv
-```
-
-### Diagnostic Figures and Tables
-
-```text
-output/figures/residuals_vs_fitted.png
-output/figures/qq_plot.png
-output/figures/residual_histogram.png
-output/figures/cooks_distance.png
-output/figures/leverage_plot.png
-output/tables/influence_summary.csv
-```
 
 ## Modeling Notes
 
