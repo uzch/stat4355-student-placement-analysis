@@ -48,3 +48,6 @@ po/*~
 # RStudio Connect folder
 rsconnect/
 .positai
+
+# Local RStudio project files
+*.Rproj
